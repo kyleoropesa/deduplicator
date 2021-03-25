@@ -1,3 +1,4 @@
+from typing import List
 import functools
 import time
 import random
@@ -20,3 +21,7 @@ def timer(func):
 def create_random_email() -> str:
     random_username = ''.join(random.choices(string.ascii_uppercase + string.digits, k=8))
     return f'{random_username}@sample.com'
+
+
+def create_list_of_unique_emails(size: int) -> List[str]:
+    return [create_random_email() for _ in range(size)]
