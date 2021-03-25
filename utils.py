@@ -53,3 +53,16 @@ def create_list_of_unique_and_duplicate_emails(size: int = 100000, duplicate_per
     random.shuffle(lists_with_unique_and_duplicate_emails)
 
     return lists_with_unique_and_duplicate_emails
+
+
+@timer
+def deduplicate_list(sequence):
+    unique_items = set([])
+    deduplicated_list_of_items = []
+
+    for item in sequence:
+        if item not in unique_items:
+            unique_items.add(item)
+            deduplicated_list_of_items.append(item)
+
+    return deduplicated_list_of_items
