@@ -73,3 +73,19 @@ This will output the execution time of the function in milliseconds for the defi
 deduplicate_list function took 19.502 ms to execute
 ```
 
+### Results
+Here's the benchmark of the function when executed on my machine. Here's the spec list
+
+```
+Macbook Pro 2019
+2.8 GHz Quad-Core Intel Core i7
+16 GB 2133 MHz LPDDR3
+
+5 test iteration
+deduplicate_list function took 19.502 ms to execute
+deduplicate_list function took 18.530 ms to execute
+deduplicate_list function took 18.323 ms to execute
+deduplicate_list function took 19.037 ms to execute
+deduplicate_list function took 17.819 ms to execute
+```
+
