@@ -1,4 +1,5 @@
 from typing import List
+from math import ceil
 import functools
 import time
 import random
@@ -25,3 +26,18 @@ def create_random_email() -> str:
 
 def create_list_of_unique_emails(size: int) -> List[str]:
     return [create_random_email() for _ in range(size)]
+
+
+def create_list_of_duplicate_email_pairs(size: int) -> List[str]:
+    if size <= 1:
+        raise ValueError('size should be greater than 1')
+
+    if size % 2 == 0:
+        return [create_random_email() for _ in range(ceil(size / 2))] * 2
+    else:
+        get_lower_half_of_size = size - ceil(size / 2)
+        list_of_duplicate_emails = [create_random_email() for _ in range(get_lower_half_of_size)] * 2
+        first_item_in_list = list_of_duplicate_emails[0]
+        list_of_duplicate_emails.append(first_item_in_list)
+
+        return list_of_duplicate_emails
