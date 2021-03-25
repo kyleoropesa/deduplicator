@@ -1,5 +1,7 @@
 import functools
 import time
+import random
+import string
 
 
 def timer(func):
@@ -13,3 +15,8 @@ def timer(func):
         return ref
 
     return wrap
+
+
+def create_random_email() -> str:
+    random_username = ''.join(random.choices(string.ascii_uppercase + string.digits, k=8))
+    return f'{random_username}@sample.com'
