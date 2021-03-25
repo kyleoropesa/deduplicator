@@ -41,3 +41,15 @@ def create_list_of_duplicate_email_pairs(size: int) -> List[str]:
         list_of_duplicate_emails.append(first_item_in_list)
 
         return list_of_duplicate_emails
+
+
+def create_list_of_unique_and_duplicate_emails(size: int = 100000, duplicate_percent: float = .50) -> List[str]:
+    unique_email_count = ceil(size * duplicate_percent)
+    duplicate_email_count = size - unique_email_count
+    duplicate_email_list = create_list_of_duplicate_email_pairs(duplicate_email_count)
+    unique_emails_list = create_list_of_unique_emails(unique_email_count)
+
+    lists_with_unique_and_duplicate_emails = duplicate_email_list + unique_emails_list
+    random.shuffle(lists_with_unique_and_duplicate_emails)
+
+    return lists_with_unique_and_duplicate_emails
