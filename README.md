@@ -74,8 +74,10 @@ deduplicate_list function took 19.502 ms to execute
 ```
 
 ### Results
-Here's the benchmark of the function when executed on my machine. Here's the spec list
+Here's the benchmark of the function when executed on my two machines. Both
+having the same list size of 100,000 and duplicate percentage of 50%
 
+On Macbook
 ```
 Macbook Pro 2019
 2.8 GHz Quad-Core Intel Core i7
@@ -89,3 +91,17 @@ deduplicate_list function took 19.037 ms to execute
 deduplicate_list function took 17.819 ms to execute
 ```
 
+On Thinkpad
+```
+Lenovo Thinkpad X270
+Corei5-7200U @ 2.5GGHz
+8gb Memory
+
+5 test iteration
+deduplicate_list function took 23.062 ms to execute
+deduplicate_list function took 22.717 ms to execute
+deduplicate_list function took 22.130 ms to execute
+deduplicate_list function took 21.941 ms to execute
+deduplicate_list function took 21.772 ms to execute
+deduplicate_list function took 21.823 ms to execute
+```
